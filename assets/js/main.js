@@ -21,3 +21,27 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+const activeObserver = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        const marker = entry.target.querySelector(".marker");
+
+        if (!marker) return;
+
+        if (entry.isIntersecting) {
+            marker.classList.add("active");
+        } else {
+            marker.classList.remove("active");
+        }
+
+    });
+
+}, {
+    threshold: 0.5
+});
+
+document.querySelectorAll(".timeline-item").forEach(item => {
+    activeObserver.observe(item);
+});
