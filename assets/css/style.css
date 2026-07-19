@@ -195,34 +195,6 @@ body{
 
 }
 
-.timeline::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    bottom:0;
-
-    width:var(--line-width);
-
-    left:calc(
-        var(--timeline-time-width)
-        + (var(--timeline-marker-width) / 2)
-        - (var(--line-width) / 2)
-    );
-
-    background:#ddd;
-
-    border-radius:999px;
-
-    pointer-events:none;
-
-    z-index:1;
-
-}
-
 .timeline-item{
 
     display:grid;
@@ -269,6 +241,18 @@ body{
    Marker
 ========================================================= */
 
+.marker-column{
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-self:stretch;
+
+}
+
 .marker{
 
     width:var(--marker-size);
@@ -279,10 +263,6 @@ body{
 
     margin-top:15px;
 
-    justify-self:center;
-
-    align-self:start;
-
     position:relative;
 
     z-index:2;
@@ -292,6 +272,30 @@ body{
     box-shadow:0 0 0 var(--line-width) #ddd;
 
     background-clip:padding-box;
+
+}
+
+.marker-column::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:var(--line-width);
+
+    background:#ddd;
+
+    border-radius:999px;
+
+    z-index:1;
 
 }
 
