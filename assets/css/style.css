@@ -327,6 +327,13 @@ body{
 
 }
 
+.marker.start,
+.marker.goal{
+
+    background:#bfbfbf;
+
+}
+
 /* =========================================================
    Card
 ========================================================= */
@@ -399,6 +406,13 @@ body{
 
 }
 
+.card.start,
+.card.goal{
+
+    background:#f6f6f6;
+
+}
+
 /* 吹き出しの色 */
 
 .card.onsen::before{
@@ -428,6 +442,13 @@ body{
 .card.secret::before{
 
     border-right-color:#f5efff;
+
+}
+
+.card.start::before,
+.card.goal::before{
+
+    border-right-color:#f6f6f6;
 
 }
 
