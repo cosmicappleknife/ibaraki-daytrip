@@ -39,7 +39,7 @@ body{
     --marker-size:24px;
     --line-width:4px;
 
-    --timeline-line-offset: 2px;
+    --timeline-line-offset: 12px;
 
 }
 
@@ -627,7 +627,7 @@ footer{
 
     --marker-size:22px;
 
-    --timeline-line-offset:2px;
+    --timeline-line-offset:12px;
       
    }
    
