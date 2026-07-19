@@ -251,6 +251,8 @@ body{
 
     align-self:stretch;
 
+    align-items: flex-start;
+
 }
 
 .marker{
