@@ -626,7 +626,13 @@ footer{
     --timeline-line-offset:12px;
       
    }
-   
+
+   .hero{
+
+        height:140px;
+
+    }
+
 #backToTop{
 
     width:46px;
