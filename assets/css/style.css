@@ -257,6 +257,21 @@ body{
 
     box-shadow:0 0 0 4px #ddd;
 
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+
+}
+
+.marker.active{
+
+    transform:scale(1.4);
+
+    box-shadow:
+        0 0 0 4px #ddd,
+        0 0 0 10px rgba(255,255,255,.45),
+        0 0 18px rgba(255,255,255,.9);
+
 }
 
 /* ---------- Category Colors ---------- */
