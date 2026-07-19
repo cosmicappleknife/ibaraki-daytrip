@@ -48,16 +48,16 @@ function updateActiveMarker(){
 
     });
 
-    document.querySelectorAll(".marker").forEach(marker=>{
-        marker.classList.remove("active");
+    document.querySelectorAll(".time").forEach(time=>{
+        time.classList.remove("active");
     });
 
     if(closestItem){
 
-        const marker = closestItem.querySelector(".marker");
+        const time = closestItem.querySelector(".time");
 
-        if(marker){
-            marker.classList.add("active");
+        if(time){
+            time.classList.add("active");
         }
 
     }
