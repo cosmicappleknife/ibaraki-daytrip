@@ -1,0 +1,2 @@
+# ibaraki-daytrip
+Ibaraki Daytrip
