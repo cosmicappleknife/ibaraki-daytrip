@@ -520,19 +520,12 @@ footer{
 ========================================================= */
 
 .fade{
-
     opacity:0;
-
-    transform:translateY(40px);
-
+    transform:translateY(60px);
     transition:
-
-    opacity .8s ease,
-
-    transform .8s ease;
-
+        opacity 1.2s ease,
+        transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
 }
-
 .fade.show{
 
     opacity:1;
