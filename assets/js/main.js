@@ -24,28 +24,32 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const backToTop = document.getElementById("backToTop");
 
-window.addEventListener("scroll", () => {
+if (backToTop) {
 
-    if (window.scrollY > 300) {
+    window.addEventListener("scroll", () => {
 
-        backToTop.classList.add("show");
+        if (window.scrollY > 300) {
 
-    } else {
+            backToTop.classList.add("show");
 
-        backToTop.classList.remove("show");
+        } else {
 
-    }
+            backToTop.classList.remove("show");
 
-});
-
-backToTop.addEventListener("click", () => {
-
-    window.scrollTo({
-
-        top: 0,
-
-        behavior: "smooth"
+        }
 
     });
 
-});
+    backToTop.addEventListener("click", () => {
+
+        window.scrollTo({
+
+            top: 0,
+
+            behavior: "smooth"
+
+        });
+
+    });
+
+}
