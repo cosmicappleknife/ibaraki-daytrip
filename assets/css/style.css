@@ -213,11 +213,13 @@ body{
         - (var(--line-width) / 2)
     );
 
-    background:#dddddd;
+    background:#ddd;
 
-    border-radius:calc(var(--line-width) / 2);
+    border-radius:999px;
 
-    z-index:0;
+    pointer-events:none;
+
+    z-index:1;
 
 }
 
@@ -288,6 +290,8 @@ body{
     border:4px solid #fff;
 
     box-shadow:0 0 0 var(--line-width) #ddd;
+
+    background-clip:padding-box;
 
 }
 
