@@ -22,26 +22,50 @@ document.addEventListener("DOMContentLoaded", () => {
 
 });
 
-const activeObserver = new IntersectionObserver((entries) => {
+const items = document.querySelectorAll(".timeline-item");
 
-    entries.forEach(entry => {
+function updateActiveMarker(){
 
-        const marker = entry.target.querySelector(".marker");
+    const center = window.innerHeight / 2;
 
-        if (!marker) return;
+    let closestItem = null;
+    let closestDistance = Infinity;
 
-        if (entry.isIntersecting) {
-            marker.classList.add("active");
-        } else {
-            marker.classList.remove("active");
+    items.forEach(item=>{
+
+        const rect = item.getBoundingClientRect();
+
+        const itemCenter = rect.top + rect.height / 2;
+
+        const distance = Math.abs(center - itemCenter);
+
+        if(distance < closestDistance){
+
+            closestDistance = distance;
+            closestItem = item;
+
         }
 
     });
 
-}, {
-    threshold: 0.5
-});
+    document.querySelectorAll(".marker").forEach(marker=>{
+        marker.classList.remove("active");
+    });
 
-document.querySelectorAll(".timeline-item").forEach(item => {
-    activeObserver.observe(item);
-});
+    if(closestItem){
+
+        const marker = closestItem.querySelector(".marker");
+
+        if(marker){
+            marker.classList.add("active");
+        }
+
+    }
+
+}
+
+window.addEventListener("scroll", updateActiveMarker);
+
+window.addEventListener("resize", updateActiveMarker);
+
+updateActiveMarker();
