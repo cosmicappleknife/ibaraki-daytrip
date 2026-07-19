@@ -743,6 +743,69 @@ footer{
 
 }
 
+/*==============================
+  TOPへ戻るボタン
+==============================*/
+
+#backToTop{
+
+    position:fixed;
+
+    right:20px;
+
+    bottom:20px;
+
+    width:52px;
+
+    height:52px;
+
+    border:none;
+
+    border-radius:50%;
+
+    background:#2c7be5;
+
+    color:#fff;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+
+    opacity:0;
+
+    visibility:hidden;
+
+    transform:translateY(10px);
+
+    transition:
+        opacity .3s,
+        transform .3s,
+        visibility .3s;
+
+    z-index:999;
+
+}
+
+#backToTop.show{
+
+    opacity:1;
+
+    visibility:visible;
+
+    transform:translateY(0);
+
+}
+
+#backToTop:hover{
+
+    background:#1a68d1;
+
+}
+
 /* =========================================================
    End
 ========================================================= */
