@@ -1,89 +1,689 @@
+/* =========================================================
+   DayTrip Template v1.0
+   Base
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
 body{
 
-margin:0;
+    background:#f7f7f5;
 
-padding:0;
+    color:#333;
 
-background:#fafafa;
+    font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    "Helvetica Neue",
+    sans-serif;
 
-font-family:
--apple-system,
-BlinkMacSystemFont,
-"Helvetica Neue",
-sans-serif;
-
-color:#333;
+    line-height:1.7;
 
 }
 
-header{
+/* =========================================================
+   Hero
+========================================================= */
 
-padding:48px 24px;
+.hero{
 
-text-align:center;
+    position:relative;
 
-}
+    height:38vh;
 
-.english{
+    min-height:230px;
 
-display:block;
+    max-height:340px;
 
-font-size:14px;
-
-letter-spacing:4px;
-
-color:#999;
-
-margin-bottom:6px;
+    overflow:hidden;
 
 }
 
-.japanese{
+.hero-image{
 
-display:block;
+    width:100%;
 
-font-size:34px;
+    height:100%;
 
-font-weight:700;
+    object-fit:cover;
 
-}
-
-.subtitle{
-
-margin-top:14px;
-
-color:#777;
-
-font-size:15px;
+    display:block;
 
 }
 
-.tags{
+.hero-overlay{
 
-margin-top:24px;
+    position:absolute;
 
-display:flex;
+    inset:0;
 
-justify-content:center;
+    display:flex;
 
-gap:10px;
+    flex-direction:column;
 
-flex-wrap:wrap;
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    background:rgba(0,0,0,.28);
+
+    color:white;
+
+    padding:20px;
+
+}
+
+.hero-en{
+
+    letter-spacing:5px;
+
+    font-size:14px;
+
+    opacity:.9;
+
+    margin-bottom:8px;
 
 }
 
-.tags span{
+.hero h1{
 
-background:white;
+    font-size:34px;
 
-padding:8px 14px;
+    font-weight:700;
 
-border-radius:999px;
-
-font-size:14px;
-
-box-shadow:
-0 2px 8px
-rgba(0,0,0,.08);
+    margin-bottom:10px;
 
 }
+
+.hero-date{
+
+    font-size:15px;
+
+    opacity:.95;
+
+}
+
+/* =========================================================
+   Today's Route
+========================================================= */
+
+.route-summary{
+
+    text-align:center;
+
+    padding:30px 20px;
+
+}
+
+.route-summary h2{
+
+    font-size:18px;
+
+    margin-bottom:20px;
+
+}
+
+.route-icons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:12px;
+
+    flex-wrap:wrap;
+
+}
+
+.route-icons span{
+
+    width:42px;
+
+    height:42px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    background:white;
+
+    box-shadow:0 4px 14px rgba(0,0,0,.08);
+
+    font-size:22px;
+
+}
+
+/* =========================================================
+   Timeline
+========================================================= */
+
+.timeline{
+
+    width:min(94%,520px);
+
+    margin:auto;
+
+    position:relative;
+
+    padding-bottom:80px;
+
+}
+
+.timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:78px;
+
+    top:0;
+
+    bottom:0;
+
+    width:4px;
+
+    background:#dddddd;
+
+    border-radius:10px;
+
+}
+
+.timeline-item{
+
+    display:grid;
+
+    grid-template-columns:
+
+        60px
+        36px
+        1fr;
+
+    gap:14px;
+
+    align-items:flex-start;
+
+    margin-bottom:42px;
+
+    position:relative;
+
+}
+
+.time{
+
+    font-size:18px;
+
+    font-weight:700;
+
+    padding-top:15px;
+
+    text-align:right;
+
+}
+
+/* =========================================================
+   Marker
+========================================================= */
+
+.marker{
+
+    width:24px;
+
+    height:24px;
+
+    border-radius:50%;
+
+    margin-top:15px;
+
+    position:relative;
+
+    z-index:2;
+
+    border:4px solid white;
+
+    box-shadow:0 0 0 4px #ddd;
+
+}
+
+/* ---------- Category Colors ---------- */
+
+.marker.onsen{
+
+    background:#f28c28;
+
+}
+
+.marker.gourmet{
+
+    background:#d84b43;
+
+}
+
+.marker.shopping{
+
+    background:#ef7eb5;
+
+}
+
+.marker.factory{
+
+    background:#4c8bf5;
+
+}
+
+.marker.secret{
+
+    background:#8b5cf6;
+
+}
+
+/* =========================================================
+   Card
+========================================================= */
+
+.card{
+
+    background:white;
+
+    border-radius:18px;
+
+    padding:18px;
+
+    box-shadow:
+
+    0 10px 28px rgba(0,0,0,.08);
+
+    position:relative;
+
+}
+
+/* 吹き出し */
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:-12px;
+
+    top:24px;
+
+    border-top:12px solid transparent;
+
+    border-bottom:12px solid transparent;
+
+    border-right:12px solid white;
+
+}
+
+/* ---------- Category Background ---------- */
+
+.card.onsen{
+
+    background:#fff3e7;
+
+}
+
+.card.gourmet{
+
+    background:#fff0ef;
+
+}
+
+.card.shopping{
+
+    background:#fff2f8;
+
+}
+
+.card.factory{
+
+    background:#edf5ff;
+
+}
+
+.card.secret{
+
+    background:#f5efff;
+
+}
+
+/* 吹き出しの色 */
+
+.card.onsen::before{
+
+    border-right-color:#fff3e7;
+
+}
+
+.card.gourmet::before{
+
+    border-right-color:#fff0ef;
+
+}
+
+.card.shopping::before{
+
+    border-right-color:#fff2f8;
+
+}
+
+.card.factory::before{
+
+    border-right-color:#edf5ff;
+
+}
+
+.card.secret::before{
+
+    border-right-color:#f5efff;
+
+}
+
+/* ---------- Title ---------- */
+
+.card h3{
+
+    font-size:22px;
+
+    margin-bottom:10px;
+
+}
+
+/* ---------- Description ---------- */
+
+.card p{
+
+    font-size:15px;
+
+    color:#555;
+
+}
+
+/* ---------- Photo ---------- */
+
+.card img{
+
+    display:block;
+
+    width:100%;
+
+    max-width:320px;
+
+    height:180px;
+
+    margin:16px auto;
+
+    border-radius:14px;
+
+    object-fit:cover;
+
+    box-shadow:
+
+    0 6px 18px rgba(0,0,0,.12);
+
+}
+
+/* ---------- Google Maps ---------- */
+
+.card a{
+
+    display:inline-block;
+
+    margin-top:8px;
+
+    text-decoration:none;
+
+    color:white;
+
+    background:#333;
+
+    padding:10px 18px;
+
+    border-radius:999px;
+
+    font-size:14px;
+
+    transition:.25s;
+
+}
+
+.card a:hover{
+
+    transform:translateY(-2px);
+
+    opacity:.92;
+
+}
+
+/* =========================================================
+   Secret Spot
+========================================================= */
+
+.secret-badge{
+
+    display:inline-block;
+
+    background:#8b5cf6;
+
+    color:white;
+
+    padding:5px 12px;
+
+    border-radius:999px;
+
+    font-size:12px;
+
+    margin-bottom:12px;
+
+}
+
+/* =========================================================
+   Footer
+========================================================= */
+
+footer{
+
+    text-align:center;
+
+    padding:40px 20px;
+
+    color:#888;
+
+}
+
+.footer-small{
+
+    margin-top:8px;
+
+    font-size:13px;
+
+}
+
+/* =========================================================
+   Fade Animation
+========================================================= */
+
+.fade{
+
+    opacity:0;
+
+    transform:translateY(40px);
+
+    transition:
+
+    opacity .8s ease,
+
+    transform .8s ease;
+
+}
+
+.fade.show{
+
+    opacity:1;
+
+    transform:translateY(0);
+
+}
+
+.fade-first,
+.fade-second,
+.fade-third{
+
+    animation:heroFade .8s forwards;
+
+    opacity:0;
+
+}
+
+.fade-second{
+
+    animation-delay:.2s;
+
+}
+
+.fade-third{
+
+    animation-delay:.4s;
+
+}
+
+@keyframes heroFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* =========================================================
+   Mobile Fine Tuning
+========================================================= */
+
+@media (max-width: 480px){
+
+    .hero h1{
+        font-size:30px;
+    }
+
+    .hero-date{
+        font-size:14px;
+    }
+
+    .route-summary{
+        padding:24px 16px;
+    }
+
+    .route-icons{
+        gap:10px;
+    }
+
+    .route-icons span{
+        width:38px;
+        height:38px;
+        font-size:20px;
+    }
+
+    .timeline{
+        width:95%;
+    }
+
+    .timeline::before{
+        left:72px;
+    }
+
+    .timeline-item{
+        grid-template-columns:56px 30px 1fr;
+        gap:12px;
+        margin-bottom:34px;
+    }
+
+    .time{
+        font-size:17px;
+        padding-top:15px;
+    }
+
+    .marker{
+        width:22px;
+        height:22px;
+        margin-top:15px;
+    }
+
+    .card{
+        padding:16px;
+        border-radius:16px;
+    }
+
+    .card::before{
+        top:22px;
+    }
+
+    .card h3{
+        font-size:20px;
+    }
+
+    .card p{
+        font-size:14px;
+    }
+
+    .card img{
+        width:100%;
+        max-width:100%;
+        height:170px;
+        object-fit:cover;
+        margin:14px auto;
+        border-radius:12px;
+    }
+
+}
+
+/* =========================================================
+   Large Screen Limit
+   （PCで広がり過ぎないようにする）
+========================================================= */
+
+@media (min-width: 900px){
+
+    .timeline{
+        max-width:520px;
+    }
+
+    .hero{
+        max-width:520px;
+        margin:0 auto;
+        border-radius:0 0 18px 18px;
+        overflow:hidden;
+    }
+
+}
+
+/* =========================================================
+   End
+========================================================= */
