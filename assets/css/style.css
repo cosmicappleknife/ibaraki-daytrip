@@ -631,7 +631,7 @@ footer{
       
    }
    
-   #backToTop{
+#backToTop{
 
     width:46px;
 
@@ -639,11 +639,11 @@ footer{
 
     right:16px;
 
-    bottom:16px;
+    bottom:max(16px, env(safe-area-inset-bottom));
 
     font-size:20px;
 
-   }
+}
    
     .hero h1{
         font-size:30px;
@@ -769,7 +769,7 @@ footer{
 
     right:20px;
 
-    bottom:20px;
+    bottom:max(20px, env(safe-area-inset-bottom));
 
     width:52px;
 
@@ -802,7 +802,9 @@ footer{
         transform .3s,
         visibility .3s;
 
-    z-index:999;
+    z-index:99999;
+
+    -webkit-appearance:none;
 
 }
 
