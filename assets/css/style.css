@@ -31,13 +31,13 @@ body{
 
 :root{
 
-    --timeline-time-width:56px;
+    /* PC */
+    --timeline-time-width:60px;
+    --timeline-marker-width:36px;
+    --timeline-gap:14px;
 
-    --timeline-marker-width:30px;
-
-    --timeline-gap:12px;
-
-    --marker-size:22px;
+    --marker-size:24px;
+    --line-width:4px;
 
 }
 
@@ -215,7 +215,9 @@ body{
 
     background:#dddddd;
 
-    border-radius:10px;
+    border-radius:calc(var(--line-width) / 2);
+
+    z-index:0;
 
 }
 
@@ -277,13 +279,15 @@ body{
 
     justify-self:center;
 
+    align-self:start;
+
     position:relative;
 
     z-index:2;
 
-    border:4px solid white;
+    border:4px solid #fff;
 
-    box-shadow:0 0 0 4px #ddd;
+    box-shadow:0 0 0 var(--line-width) #ddd;
 
 }
 
@@ -610,6 +614,16 @@ footer{
 
 @media (max-width: 480px){
 
+   :root{
+
+    --timeline-time-width:56px;
+    --timeline-marker-width:30px;
+    --timeline-gap:12px;
+
+    --marker-size:22px;
+
+   }
+   
     .hero h1{
         font-size:30px;
     }
