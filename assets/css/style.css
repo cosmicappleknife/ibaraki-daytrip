@@ -243,15 +243,9 @@ body{
 
 .marker-column{
 
-    position:relative;
-
     display:flex;
 
     justify-content:center;
-
-    align-self:stretch;
-
-    align-items: flex-start;
 
 }
 
@@ -274,30 +268,6 @@ body{
     box-shadow:0 0 0 var(--line-width) #ddd;
 
     background-clip:padding-box;
-
-}
-
-.marker-column::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:0;
-
-    bottom:0;
-
-    left:50%;
-
-    transform:translateX(-50%);
-
-    width:var(--line-width);
-
-    background:#ddd;
-
-    border-radius:999px;
-
-    z-index:1;
 
 }
 
@@ -680,6 +650,32 @@ footer{
     .timeline{
         width:95%;
     }
+
+   .timeline::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    bottom:0;
+
+    left:calc(
+        var(--timeline-time-width)
+        + (var(--timeline-marker-width) / 2)
+        - (var(--line-width) / 2)
+    );
+
+    width:var(--line-width);
+
+    background:#ddd;
+
+    border-radius:999px;
+
+    z-index:0;
+
+}
 
     .timeline-item{
         margin-bottom:34px;
