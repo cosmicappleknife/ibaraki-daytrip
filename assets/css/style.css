@@ -235,6 +235,34 @@ body{
 
 }
 
+.time{
+
+    transition:
+        color .35s ease,
+        transform .35s ease,
+        font-size .35s ease,
+        font-weight .35s ease;
+
+}
+
+.time.active{
+
+    color:#f28c28;
+
+    font-weight:700;
+
+    font-size:1.15rem;
+
+    transform:translateX(-8px);
+
+}
+
+.time.active::before{
+
+    content:"▶ ";
+
+}
+
 /* =========================================================
    Marker
 ========================================================= */
