@@ -629,6 +629,20 @@ footer{
       
    }
    
+   #backToTop{
+
+    width:46px;
+
+    height:46px;
+
+    right:16px;
+
+    bottom:16px;
+
+    font-size:20px;
+
+   }
+   
     .hero h1{
         font-size:30px;
     }
