@@ -34,8 +34,10 @@ body{
     /* PC */
     --timeline-time-width:60px;
     --timeline-marker-width:36px;
-    --timeline-gap:14px;
-    --timeline-end-gap:95px;
+    --timeline-gap:14px;          /* 横方向 */
+    --timeline-item-gap:16px;     /* 各カード間 */
+    --timeline-end-gap:95px;      /* 最後だけ大きく */
+
 
     --marker-size:24px;
     --line-width:4px;
