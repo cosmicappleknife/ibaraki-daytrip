@@ -42,7 +42,7 @@ body{
     --marker-size:24px;
     --line-width:4px;
 
-    --timeline-line-offset: 10px;
+    --timeline-line-offset: 14px;
 
     --timeline-line-x:
         calc(
