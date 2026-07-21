@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     document.querySelectorAll(".fade").forEach(el => {
         observer.observe(el);
+        observer.unobserve(entry.target);
     });
 
 });
