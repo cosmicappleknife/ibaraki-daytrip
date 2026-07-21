@@ -42,6 +42,16 @@ body{
 
     --timeline-line-offset: 12px;
 
+    --timeline-line-x:
+        calc(
+            var(--timeline-time-width)
+            + (var(--timeline-marker-width)/2)
+            - (var(--line-width)/2)
+            + var(--timeline-line-offset)
+        );
+
+    --marker-offset-y:15px;
+
 }
 
 /* =========================================================
@@ -202,7 +212,7 @@ body{
 
     position:absolute;
 
-    left:calc(--timeline-line-x);
+    left:var(--timeline-line-x);
 
     top:26px;
 
@@ -280,7 +290,7 @@ body{
 
     border-radius:50%;
 
-    margin-top:--marker-offset-y;
+    margin-top:var(--marker-offset-y);
 
     position:relative;
 
@@ -704,7 +714,7 @@ footer{
     }
 
     .marker{
-        margin-top:--marker-offset-y;
+        margin-top:var(--marker-offset-y);
         box-shadow:none;
     }
 
