@@ -52,6 +52,7 @@ body{
             + var(--timeline-line-offset)
         );
 
+      /*丸ポチを上下にずらす. プラスで下降*/
     --marker-offset-y:16px;
 
 }
