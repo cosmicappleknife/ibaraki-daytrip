@@ -52,7 +52,7 @@ body{
             + var(--timeline-line-offset)
         );
 
-    --marker-offset-y:15px;
+    --marker-offset-y:16px;
 
 }
 
