@@ -55,3 +55,31 @@ if (backToTop) {
     });
 
 }
+
+document.querySelectorAll(".jump-icon").forEach(icon => {
+
+    icon.addEventListener("click", e => {
+
+        e.preventDefault();
+
+        const target = document.querySelector(
+
+            icon.getAttribute("href")
+
+        );
+
+        if(target){
+
+            target.scrollIntoView({
+
+                behavior:"smooth",
+
+                block:"center"
+
+            });
+
+        }
+
+    });
+
+});
