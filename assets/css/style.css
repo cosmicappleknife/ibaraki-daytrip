@@ -196,16 +196,13 @@ body{
 
 }
 
-.timeline-line{
+.timeline::before{
+
+    content:"";
 
     position:absolute;
 
-    left:calc(
-        var(--timeline-time-width)
-        + (var(--timeline-marker-width)/2)
-        - (var(--line-width)/2)
-        + var(--timeline-line-offset)
-    );
+    left:calc(...);
 
     top:26px;
 
@@ -216,8 +213,6 @@ body{
     background:#ddd;
 
     border-radius:999px;
-
-    z-index:0;
 
 }
 
