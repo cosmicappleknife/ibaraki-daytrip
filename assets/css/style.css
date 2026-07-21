@@ -679,9 +679,9 @@ footer{
 
     position:absolute;
 
-    top:22px;
+    top:0;
 
-    bottom:105px;
+    bottom:0;
 
     left:calc(
         var(--timeline-time-width)
