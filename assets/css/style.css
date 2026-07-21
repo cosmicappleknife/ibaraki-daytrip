@@ -248,6 +248,12 @@ body{
 
 }
 
+.card{
+
+    margin-top:-3px;
+
+}
+
 .timeline-item:last-child{
 
     margin-bottom:var(--timeline-end-gap);
