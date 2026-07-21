@@ -24,8 +24,6 @@ const observer = new IntersectionObserver((entries) => {
 
 });
 
-});
-
 const backToTop = document.getElementById("backToTop");
 
 if (backToTop) {
