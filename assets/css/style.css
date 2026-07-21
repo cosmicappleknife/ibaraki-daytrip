@@ -240,7 +240,7 @@ body{
 
     align-items:flex-start;
 
-    margin-bottom:42px;
+    margin-bottom:var(--timeline-item-gap);
 
     position:relative;
 
@@ -248,7 +248,7 @@ body{
 
 .timeline-item:last-child{
 
-    margin-bottom:80px;
+    margin-bottom:var(--timeline-end-gap);
 
 }
 
