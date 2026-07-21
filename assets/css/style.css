@@ -675,35 +675,6 @@ footer{
         width:95%;
     }
 
-   .timeline::before{
-
-    content:"";
-
-    position:absolute;
-
-    top:26px;
-
-    height:calc(100% - 60px);
-
-    bottom:auto;
-
-    left:calc(
-        var(--timeline-time-width)
-        + (var(--timeline-marker-width)/2)
-        - (var(--line-width)/2)
-        + var(--timeline-line-offset)
-    );
-
-    width:var(--line-width);
-
-    background:#ddd;
-
-    border-radius:999px;
-
-    z-index:0;
-
-}
-
     .timeline-item{
         margin-bottom:34px;
     }
