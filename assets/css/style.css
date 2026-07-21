@@ -398,7 +398,7 @@ body{
 
     left:-12px;
 
-    top:22px;
+    top:20px;
 
     border-top:12px solid transparent;
 
@@ -760,7 +760,7 @@ footer{
     }
 
     .card::before{
-        top:20px;
+        top:18px;
     }
 
     .card h3{
