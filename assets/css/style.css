@@ -35,6 +35,7 @@ body{
     --timeline-time-width:60px;
     --timeline-marker-width:36px;
     --timeline-gap:14px;
+    --timeline-end-gap:95px;
 
     --marker-size:24px;
     --line-width:4px;
@@ -191,7 +192,32 @@ body{
 
     position:relative;
 
-    padding-bottom:80px;
+    padding-bottom:0;
+
+}
+
+.timeline-line{
+
+    position:absolute;
+
+    left:calc(
+        var(--timeline-time-width)
+        + (var(--timeline-marker-width)/2)
+        - (var(--line-width)/2)
+        + var(--timeline-line-offset)
+    );
+
+    top:26px;
+
+    bottom:var(--timeline-end-gap);
+
+    width:var(--line-width);
+
+    background:#ddd;
+
+    border-radius:999px;
+
+    z-index:0;
 
 }
 
@@ -212,6 +238,12 @@ body{
     margin-bottom:42px;
 
     position:relative;
+
+}
+
+.timeline-item:last-child{
+
+    margin-bottom:80px;
 
 }
 
