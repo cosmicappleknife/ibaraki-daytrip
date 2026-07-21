@@ -343,6 +343,30 @@ body{
 
 }
 
+.jump-icon{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:inherit;
+
+    text-decoration:none;
+
+    cursor:pointer;
+
+    transition:opacity .2s ease;
+
+}
+
+.jump-icon:hover{
+
+    opacity:.7;
+
+}
+
 /* =========================================================
    Card
 ========================================================= */
